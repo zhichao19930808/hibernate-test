@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--  将类名与表名建立映射关系 -->
+	<class name="xin.zcglory.entity.Student" table="student">
+		<!--     将类属性与表字段建立映射关系 -->
+		<!--     private int id; -->
+		<id name="id" type="java.lang.Integer">
+			<column name="t_id"/>
+            <!--//生成主键的策略-->
+            <!--自增长-->
+            <generator class="increment"/>
+            <!--uuid-->
+            <!--<generator class="uuid"/>-->
+		</id>
+		<!--     private String name; -->
+		<property name="name" type="java.lang.String">
+			<column name="t_name"/>
+		</property>
+		<!--     private String address; -->
+		<property name="address" type="java.lang.String">
+			<column name="t_address"/>
+		</property>
+		<!--     private Date time; -->
+		<property name="time" type="java.sql.Date">
+			<column name="t_time"/>
+		</property>
+	</class>
+</hibernate-mapping>
