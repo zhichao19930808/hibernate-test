@@ -12,8 +12,8 @@
 
      <!--DB schema will be updated if needed -->
     <property name="hbm2ddl.auto">update</property> <!--自动建表-->
-    <property name="format_sql">true</property>  <!--sql语句换行 -->
     <property name="show_sql">true</property><!--sql语句显示 -->
+    <property name="format_sql">false</property>  <!--sql语句换行 -->
     <property name="hibernate.current_session_context_class">thread</property><!--配置CurrentSession-->
 
 
